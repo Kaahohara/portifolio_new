@@ -18,7 +18,9 @@ function App() {
       path: "/projects",
       element: <Projects />,
     },
-  ]);
+    ],{
+      basename: "/portifolio_new" 
+    });
 
   return (
     <>
