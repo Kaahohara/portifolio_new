@@ -5,14 +5,14 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { name: 'Home', href: '/' },
-    { name: 'Projects', href: '/projects' },
+    { name: 'Home', href: '#/' },
+    { name: 'Projects', href: '#/projects' },
     { name: 'Contact', href: '#contact' },
   ];
 
   return (
     <nav className="w-full bg-transparent text-white py-4 px-6 flex justify-between items-center relative z-50">
-      <a href="/">
+      <a href="#/">
         <div className="text-2xl font-bold tracking-tighter">
           KARINA<span className="dark:text-[#9A37B0] text-slate-600">OHARA</span>
         </div>
@@ -48,7 +48,12 @@ function Navbar() {
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-[#1a1a1a] border-t border-gray-800 flex flex-col p-6 gap-4 md:hidden">
           {menuItems.map((item) => (
-            <a key={item.name} href={item.href} className="text-xl hover:text-slate-500 dark:hover:text-[#9A37B0]">
+            <a 
+              key={item.name} 
+              href={item.href} 
+              onClick={() => setIsOpen(false)}
+              className="text-xl hover:text-slate-500 dark:hover:text-[#9A37B0]"
+            >
               {item.name}
             </a>
           ))}
