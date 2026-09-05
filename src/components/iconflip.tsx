@@ -1,7 +1,6 @@
 interface IconFlipProps {
     front: string;
     back: string;
-   
 }
 
 function IconFlip({ front, back }: IconFlipProps) {

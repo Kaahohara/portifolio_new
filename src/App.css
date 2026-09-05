@@ -2,6 +2,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Inika:wght@400;700&display=swap');
+/* home.css */
+
+.hidden-element {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(30px);
+    transition: all 1s ease-out;
+}
+
+.show-element {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
 
 .App {
   text-align: center;
